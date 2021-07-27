@@ -1,7 +1,7 @@
-Object.prototype.find=function(obj){
-	for (var i in this)
+var find=function(obj,ect){
+	for (var i in ect)
 	{
-		if(this[i]==obj)
+		if(ect[i]==obj)
 			return i;
 	}
 }
