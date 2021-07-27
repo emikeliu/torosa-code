@@ -95,7 +95,7 @@ function translate(sentence,mode)
 		result.pop();
 		for(var i=0;i<result.length;i++)
 		{
-			res+=wordList.find(result[i]);
+			res+=find(result[i],wordList);
 		}
 		return res;
 	}
