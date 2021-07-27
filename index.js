@@ -1,7 +1,8 @@
 var find=function(obj,ect){
-	for (var i in ect)
+	var a=Object.getOwnPorpertyNames(ect);
+	for(var i=0;i<a.length;i++)
 	{
-		if(ect[i]==obj)
+		if(ect[a[i]]==obj)
 			return i;
 	}
 }
