@@ -1,7 +1,6 @@
 Object.prototype.find=function(obj){
 	for (var i in this)
 	{
-		console.log("find",i,obj,this[i])
 		if(this[i]==obj)
 			return i;
 	}
@@ -52,11 +51,11 @@ function translate(sentence,mode)
 	if(mode===1)
 	{
 		result="";
-		for (var i of sentence)
+		for (var i=0;i<sentence.length;i++)
 		{
-			for (var j of wordList[i])
+			for (var j=0;j<wordList[sentence[i]].length;j++)
 			{
-				if(j==="1")
+				if(wordList[sentence[i]][j]==="1")
 				{
 					result+="呜";
 				}
@@ -73,7 +72,7 @@ function translate(sentence,mode)
 	{
 		result=[""];
 		var j=0;
-		for(var i in sentence)
+		for(var i=0;i<sentence.length,i++)
 		{
 			if(sentence[i]=="呜")
 			{
@@ -94,9 +93,9 @@ function translate(sentence,mode)
 		}
 		result.pop();
 		result.pop();
-		for(var i of result)
+		for(var i=0;i<result.length;i++)
 		{
-			res+=wordList.find(i);
+			res+=wordList.find(result[i]);
 		}
 		return res;
 	}
