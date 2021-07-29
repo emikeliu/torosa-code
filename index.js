@@ -6,7 +6,7 @@ var find=function(obj,ect){
 			return i;
 	}
 }
-function translate(sentence,mode)
+function tranf(sentence,mode)
 {
 	var result;
 	var res="";
