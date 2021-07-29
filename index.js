@@ -1,5 +1,5 @@
 var find=function(obj,ect){
-	var a=Object.getOwnPorpertyNames(ect);
+	var a=ect.getOwnPropertyNames();
 	for(var i=0;i<a.length;i++)
 	{
 		if(ect[a[i]]==obj)
